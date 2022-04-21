@@ -6,14 +6,13 @@
 
 using System;
 using System.Collections;
-using System.Collections.Generic;
 
 namespace Full_GRASP_And_SOLID.Library
 {
     public class Recipe
     {
         private ArrayList steps = new ArrayList();
-        private List<string> recipe = new List<string>(); 
+        private ArrayList recipe = new ArrayList(); 
         private String Frase;
         public Product FinalProduct { get; set; }
 
@@ -27,7 +26,7 @@ namespace Full_GRASP_And_SOLID.Library
             this.steps.Remove(step);
         }
 
-        public List<string> Recipes() // Por patrón EXPERT la clase Recipe debe crear la receta porque es esta
+        public ArrayList Recipes() // Por patrón EXPERT la clase Recipe debe crear la receta porque es esta
                                      // quien conoce toda la información necesaria.
         {
             recipe.Clear();
